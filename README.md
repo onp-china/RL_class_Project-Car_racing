@@ -1,22 +1,3 @@
-###强化学习算法学习和实验报告
-
-**课程名称**：REINFORCEMENT LEARNING - 2509-BSAI402EX1-6D3A1E
-
-**项目类型**：课程项目报告
-
-**完成日期**：2026年1月3号
-
-**组员信息及贡献分配**：
-
-| 姓名 | 学号 | 贡献比例 |
-|------|------|----------|
-| Zhang Ruizhe | 1230017665 | 35% |
-| Zhong Junhan | 12300 | 20% |
-| Guo Yujia | 12300 | 15% |
-| Wu Yuze | 12300 | 15% |
-| Yu Jiaziyu | 12300 | 15% |
----
-
 ![书籍封面](images/book_cover.jpg)
 
 *Mathematical Foundations of Reinforcement Learning*
