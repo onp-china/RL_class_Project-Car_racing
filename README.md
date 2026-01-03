@@ -1,7 +1,8 @@
-![书籍封面](images/book_cover.jpg)
+## 相关资源链接
+**基于SMAPI的星露谷强化学习mod（这是我们废弃的选题之一）**：https://github.com/onp-china/RL_in_StardewValley
 
-*Mathematical Foundations of Reinforcement Learning*
-
+### 演示视频
+- **YouTube/Demo Video**: [视频链接]
 ---
 
 # 目录
@@ -35,7 +36,9 @@
 # 1. 引言
 
 ## 1.1 研究背景与动机
+![书籍封面](images/book_cover.jpg)
 
+*Mathematical Foundations of Reinforcement Learning*
 本项目旨在通过实践来深入理解《Mathematical Foundations of Reinforcement Learning》教材中的强化学习理论。我们选择通过复现多种经典的强化学习算法，并在统一的仿真环境中进行对比实验，以验证理论知识在实际应用中的效果。
 
 **核心动机：**
