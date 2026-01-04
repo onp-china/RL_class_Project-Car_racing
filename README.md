@@ -1,3 +1,135 @@
+##快速上手
+# 强化学习算法实现集合 - CarRacing-v3
+
+本项目包含多种强化学习算法在 CarRacing-v3 环境下的实现，从基础算法到 SOTA 优化版本。
+
+## 📦 安装依赖
+
+### 系统依赖（必须）
+
+Box2D 物理引擎需要 SWIG 来生成 Python 绑定代码。
+
+**Ubuntu/Debian:**
+```bash
+sudo apt-get update
+sudo apt-get install swig
+```
+
+**macOS:**
+```bash
+brew install swig
+```
+
+**Windows:** 下载安装 [SWIG](https://www.swig.org/download.html) 或使用 `conda install swig`
+
+### Python 依赖
+
+**Code 项目:**
+```bash
+pip install -r Code/requirements.txt
+```
+
+**SOTA 项目:**
+```bash
+pip install -r CarRacing-PPO-SOTA/requirements_carracing.txt
+```
+
+## 🚀 运行项目
+
+### Code 项目（基础算法实现）
+
+**运行 PPO 算法:**
+```bash
+cd Code/PPO
+python main.py
+```
+
+**其他算法（A2C、DDPG、Double_DQN、N-Step_SARSA、REINFORCE）运行方式相同:**
+```bash
+cd Code/<算法目录>
+python main.py
+```
+
+### SOTA 项目（优化版本）
+
+**运行 120Hz 演示:**
+```bash
+cd CarRacing-PPO-SOTA
+python run_120hz_demo.py
+```
+
+**可视化智能体:**
+```bash
+python visualize_agent.py --episodes 5 --use_pid --physics_fps 120 --decision_freq 1
+```
+
+**训练模型:**
+```bash
+python scripts/training/train_improved.py
+```
+
+**PID 参数优化:**
+```bash
+python optimize_pid.py --physics_fps 120 --decision_freq 1 --fast
+```
+
+## ⚙️ 常用配置参数
+
+### 训练参数配置 (适用于 Code 项目)
+
+```bash
+# 修改训练步数和并行环境数
+python main.py --total_timesteps 2000000 --num_envs 8
+
+# 设置随机种子和保存频率
+python main.py --seed 42 --save_episode_freq 50
+```
+
+### PID 与可视化配置 (适用于 SOTA 项目)
+
+```bash
+# 修改 PID 参数 (Kp, Ki, Kd)
+python visualize_agent.py --use_pid --pid_kp 0.22 --pid_ki 0.012 --pid_kd 0.20
+
+# 修改物理帧率和决策频率
+python visualize_agent.py --physics_fps 120 --decision_freq 1
+```
+
+## 📁 项目结构
+
+```
+.
+├── Code/                        # 基础算法实现
+│   ├── PPO/                    # PPO 算法
+│   ├── A2C/                    # A2C 算法（运行方式同 PPO）
+│   ├── DDPG/                   # DDPG 算法（运行方式同 PPO）
+│   ├── Double_DQN/             # Double DQN 算法（运行方式同 PPO）
+│   ├── N-Step_SARSA/           # N-Step SARSA 算法（运行方式同 PPO）
+│   ├── REINFORCE/              # REINFORCE 算法（运行方式同 PPO）
+│   └── requirements.txt
+│
+└── CarRacing-PPO-SOTA/          # SOTA 优化版本
+    ├── algorithms/
+    ├── scripts/
+    ├── saved_models/
+    └── requirements_carracing.txt
+```
+
+## ⚠️ 常见问题
+
+**安装 gymnasium[box2d] 失败:**
+```bash
+# 解决: 先安装 swig，再重新安装
+sudo apt-get install swig  # Ubuntu/Debian
+pip install gymnasium[box2d]
+```
+
+**检查 swig 是否安装:**
+```bash
+swig -version
+```
+
+
 ## 相关资源链接
 **基于SMAPI的星露谷强化学习mod（这是我们废弃的选题之一）**：https://github.com/onp-china/RL_in_StardewValley
 
