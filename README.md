@@ -1,3 +1,13 @@
+# 强化学习算法实现集合 - CarRacing-v3
+
+本项目包含多种强化学习算法在 CarRacing-v3 环境下的实现，从基础算法到 SOTA 优化版本。
+
+## 📊 项目海报
+
+[查看项目海报 PDF](images/poster.pdf)
+
+## 📦 安装依赖
+...
 ## 相关资源链接
 **基于SMAPI的星露谷强化学习mod（这是我们废弃的选题之一）**：https://github.com/onp-china/RL_in_StardewValley
 
